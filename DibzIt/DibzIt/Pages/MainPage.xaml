@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DibzIt"
+             x:Class="DibzIt.MainPage"
+             Title="DibzIt">
+
+    <StackLayout Padding="16">
+
+        <StackLayout Margin="0, 0, 0, 8">
+            <Label Text="Date" VerticalTextAlignment="Center"/>
+            <DatePicker x:Name="DatePicker" Format="dddd, dd/MM/yyyy"/>
+        </StackLayout>
+
+        <StackLayout Margin="0, 8, 0, 8">
+            <Label Text="Duration" VerticalTextAlignment="Center"/>
+            <Picker x:Name="DurationPicker">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>1 hour</x:String>
+                        <x:String>2 hours</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+                <Picker.SelectedIndex>0</Picker.SelectedIndex>
+            </Picker>
+        </StackLayout>
+
+        <Button Text="Search" Clicked="OnSearchButtonTapped"/>
+        
+    </StackLayout>
+   
+
+</ContentPage>
